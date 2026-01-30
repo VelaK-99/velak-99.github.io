@@ -1,10 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Kevin Velasquez | Gameplay Systems Programmer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0e0e0e;
+            color: #e6e6e6;
+        }
+
+        /* Top Navigation */
+        nav {
+            background: #151515;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+
+        nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #4ec9b0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #111 0%, #0e0e0e 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #4ec9b0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.85;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 28px;
+            color: #4ec9b0;
+        }
+
+        /* Project Grid */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .project-card {
+            background: #151515;
+            padding: 20px;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: #4ec9b0;
+            transform: translateY(-4px);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #4ec9b0;
+        }
+
+        .project-card p {
+            opacity: 0.85;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            background: #151515;
+            border-top: 2px solid #2a2a2a;
+            opacity: 0.7;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello, I'm a Gameplay Systems Programmer</h1>
-    <p>Portfolio coming soon.</p>
+
+    <!-- Navigation -->
+    <nav>
+        <div style="font-size: 20px; font-weight: bold; color: #4ec9b0;">
+            Kevin Velasquez
+        </div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Gameplay Systems Programmer</h1>
+        <p>Specializing in Unreal Engine 5, C++, UI frameworks, DataAssets, and scalable gameplay architecture.</p>
+    </section>
+
+    <!-- Projects Preview -->
+    <h2 class="section-title">Featured Systems</h2>
+
+    <section class="projects">
+        <div class="project-card">
+            <h3>Inventory & Hotbar System</h3>
+            <p>A modular drag‑and‑drop inventory with DataAsset‑driven item definitions and clean UI logic.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Crafting System</h3>
+            <p>Dynamic recipe handling, UI integration, and world‑placement logic with fail‑safe spawning.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Equipment & Attachment Logic</h3>
+            <p>Component‑based equipment system with animation notifies and runtime attachment rules.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Kevin Velasquez — Portfolio
+    </footer>
+
 </body>
 </html>
