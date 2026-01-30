@@ -9,9 +9,10 @@
             font-family: 'Segoe UI', sans-serif;
             background: #0e0e0e;
             color: #e6e6e6;
+            scroll-behavior: smooth;
         }
 
-        /* Top Navigation */
+        /* Navigation */
         nav {
             background: #151515;
             padding: 15px 40px;
@@ -19,6 +20,9 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -85,10 +89,6 @@
             color: #4ec9b0;
         }
 
-        .project-card p {
-            opacity: 0.85;
-        }
-
         .project-card a {
             color: #4ec9b0;
             text-decoration: none;
@@ -99,7 +99,14 @@
             text-decoration: underline;
         }
 
-        /* Footer */
+        /* About + Contact Sections */
+        .section {
+            padding: 40px 60px;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -119,31 +126,44 @@
             Kevin Velasquez
         </div>
         <div>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Home / Hero -->
+    <section id="home" class="hero">
         <h1>Gameplay Systems Programmer</h1>
         <p>Experienced in Unreal Engine 5, Unity, C++, C#, UI frameworks, DataAssets, and scalable gameplay architecture.</p>
     </section>
 
-    <!-- Featured Project -->
-    <h2 class="section-title">Featured Project: The Hike</h2>
+    <!-- Projects -->
+    <h2 id="projects" class="section-title">Featured Project</h2>
 
     <section class="projects">
         <div class="project-card">
             <h3>The Hike</h3>
             <p>A survival‑exploration project where I served as both producer and developer. I contributed to gameplay systems, project direction, and overall development.</p>
-            <p><a href="https://ironorchardgames.itch.io/the-hike" target="_blank">View The Hike Project</a></p>
+            <p><a href="https://ironorchardgames.itch.io/the-hike" target="_blank">View The Hike</a></p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- About -->
+    <h2 id="about" class="section-title">About Me</h2>
+
+    <section class="section">
+        <p>I am a developer that graduated Full Sail's Game Developer bachelors, prior military NCO, and gamer.</p>
+    </section>
+
+    <!-- Contact -->
+    <h2 id="contact" class="section-title">Contact</h2>
+
+    <section class="section">
+        <p>Email: <a href="mailto:KevinVelasquez94@gmail.com" style="color:#4ec9b0;">KevinVelasquez94@gmail.com</a></p>
+    </section>
+
     <footer>
         © 2026 Kevin Velasquez — Portfolio
     </footer>
