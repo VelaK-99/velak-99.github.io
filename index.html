@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Kevin Velasquez | Gameplay Systems Programmer</title>
+
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: #0e0e0e;
+            background: linear-gradient(180deg, #0d0d0d 0%, #0b0b0b 100%);
             color: #e6e6e6;
             scroll-behavior: smooth;
         }
@@ -37,7 +38,7 @@
             color: #4ec9b0;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             padding: 120px 40px;
             text-align: center;
@@ -55,15 +56,32 @@
             opacity: 0.85;
         }
 
-        /* Section Title */
+        /* Section Titles */
         .section-title {
             text-align: center;
             margin-top: 80px;
             font-size: 28px;
             color: #4ec9b0;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 8px;
         }
 
-        /* Project Grid */
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: #4ec9b0;
+            border-radius: 2px;
+        }
+
+        /* Projects Grid */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -76,12 +94,21 @@
             padding: 20px;
             border: 1px solid #2a2a2a;
             border-radius: 6px;
-            transition: 0.2s;
+            transition: 0.25s;
+            box-shadow: 0 0 20px rgba(0,0,0,0.35);
         }
 
         .project-card:hover {
             border-color: #4ec9b0;
             transform: translateY(-4px);
+            box-shadow: 0 0 15px rgba(78, 201, 176, 0.25);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #2a2a2a;
         }
 
         .project-card h3 {
@@ -99,21 +126,50 @@
             text-decoration: underline;
         }
 
-        /* About + Contact Sections */
+        /* Sections */
         .section {
+            background: #111;
+            border: 1px solid #1f1f1f;
+            border-radius: 8px;
             padding: 40px 60px;
+            margin: 40px auto;
             max-width: 900px;
-            margin: auto;
             line-height: 1.6;
+            box-shadow: 0 0 20px rgba(0,0,0,0.35);
         }
 
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 30px;
             margin-top: 40px;
             background: #151515;
             border-top: 2px solid #2a2a2a;
-            opacity: 0.7;
+            opacity: 0.85;
+        }
+
+        footer a {
+            color: #4ec9b0;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -133,39 +189,72 @@
         </div>
     </nav>
 
-    <!-- Home / Hero -->
-    <section id="home" class="hero">
+    <!-- Hero -->
+    <section id="home" class="hero fade-in">
         <h1>Gameplay Systems Programmer</h1>
         <p>Experienced in Unreal Engine 5, Unity, C++, C#, UI frameworks, DataAssets, and scalable gameplay architecture.</p>
     </section>
 
     <!-- Projects -->
-    <h2 id="projects" class="section-title">Featured Project</h2>
+    <h2 id="projects" class="section-title fade-in">Projects</h2>
 
     <section class="projects">
-        <div class="project-card">
+
+        <!-- Project 1 -->
+        <div class="project-card fade-in">
+            <img src="images/TheHike_MainMenuImage.png" alt="The Hike">
             <h3>The Hike</h3>
             <p>A survival‑exploration project where I served as both producer and developer. I contributed to gameplay systems, project direction, and overall development.</p>
-            <p><a href="https://ironorchardgames.itch.io/the-hike" target="_blank">View The Hike</a></p>
+            <p><a href="https://ironorchardgames.itch.io/the-hike" target="_blank">View Project</a></p>
         </div>
+
+        <!-- Project 2 -->
+        <div class="project-card fade-in">
+            <img src="images/Irminsul_Image.png" alt="Multiplayer System">
+            <h3>Multiplayer Session System</h3>
+            <p>A fully networked multiplayer session framework built in Unreal Engine 5 using C++. Includes Steam/EOS integration, invites, presence, and robust session handling.</p>
+            <p><a href="https://velasqraptor.itch.io/irminsul" target="_blank">View Project</a></p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card fade-in">
+            <img src="images/Behind_the_Lines.png" alt="Save System">
+            <h3>Persistent Save/Load System</h3>
+            <p>A multi‑slot save system using USaveGame, supporting player stats, inventory, world state, and foliage persistence for survival gameplay.</p>
+            <p><a href="https://velasqraptor.itch.io/behind-the-lines" target="_blank">View Project</a></p>
+        </div>
+
     </section>
 
     <!-- About -->
-    <h2 id="about" class="section-title">About Me</h2>
+    <h2 id="about" class="section-title fade-in">About Me</h2>
 
-    <section class="section">
-        <p>I am a developer that graduated Full Sail's Game Developer bachelors, prior military NCO, and gamer.</p>
+    <section class="section fade-in">
+        <p>
+            I served in the military as a UAV operator for six years before leaving as an NCO. 
+            After my service, I worked as a renewable energy technician for two years, gaining 
+            hands‑on technical experience and problem‑solving skills.
+        </p>
+        <p>
+            I later graduated with a Bachelor's degree in Game Development from Full Sail University, 
+            where I focused on gameplay systems, engine architecture, and technical design. I have 
+            professional experience working with Unity/C# and Unreal Engine 5 using C++, with a strong 
+            interest in building scalable, maintainable systems that enhance player experience.
+        </p>
     </section>
 
     <!-- Contact -->
-    <h2 id="contact" class="section-title">Contact</h2>
+    <h2 id="contact" class="section-title fade-in">Contact</h2>
 
-    <section class="section">
+    <section class="section fade-in">
         <p>Email: <a href="mailto:KevinVelasquez94@gmail.com" style="color:#4ec9b0;">KevinVelasquez94@gmail.com</a></p>
     </section>
 
+    <!-- Footer -->
     <footer>
-        © 2026 Kevin Velasquez — Portfolio
+        © 2026 Kevin Velasquez — Portfolio<br>
+        <a href="https://github.com/VelaK-99">GitHub</a> •
+        <a href="https://www.linkedin.com/in/kevin-velasquez94/">LinkedIn</a>
     </footer>
 
 </body>
