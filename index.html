@@ -107,10 +107,9 @@
             position: relative;
 
             /* Equal height cards */
+            min-height: 520px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            min-height: 460px;
         }
 
         /* Gradient border effect */
@@ -136,15 +135,21 @@
 
         .project-card img {
             width: 100%;
-            height: 180px; /* uniform image height */
-            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 15px;
+
+            /* FULL SIZE — no cropping */
+            height: auto;
+            object-fit: contain;
         }
 
         .project-card h3 {
             margin-top: 0;
             color: #7df9ff;
+        }
+
+        .project-card p {
+            flex-grow: 1; /* pushes content down to keep spacing even */
         }
 
         /* Sections */
