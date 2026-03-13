@@ -105,6 +105,12 @@
             border: 2px solid transparent;
             background-clip: padding-box;
             position: relative;
+
+            /* Equal height cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 460px;
         }
 
         /* Gradient border effect */
@@ -115,8 +121,8 @@
             border-radius: 10px;
             padding: 2px;
             background: linear-gradient(135deg, #7df9ff, #4ec9b0, #8a2be2);
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) content-box, 
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -130,6 +136,8 @@
 
         .project-card img {
             width: 100%;
+            height: 180px; /* uniform image height */
+            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 15px;
         }
@@ -224,7 +232,7 @@
         <!-- Project 2 -->
         <a class="project-link" href="https://velasqraptor.itch.io/irminsul" target="_blank">
             <div class="project-card fade-in">
-                <img src="images/Irminsul_Image.png" alt="Multiplayer System">
+                <img src="images/Irminsul_Image.png" alt="Irminsul">
                 <h3>Irminsul</h3>
                 <p>A single-player first person shooter made in Unity and C#.</p>
             </div>
@@ -233,9 +241,9 @@
         <!-- Project 3 -->
         <a class="project-link" href="https://velasqraptor.itch.io/behind-the-lines" target="_blank">
             <div class="project-card fade-in">
-                <img src="images/Behind_the_Lines.png" alt="Save System">
-                <h3>Behind the lines</h3>
-                <p>A tetris game where you control a character to press buttons, defeat enemies, and move blocks. Made using C++, Cmake, and vulkan</p>
+                <img src="images/Behind_the_Lines.png" alt="Behind the Lines">
+                <h3>Behind the Lines</h3>
+                <p>A tetris-like game where you control a character to press buttons, defeat enemies, and move blocks. Built using C++, CMake, and Vulkan.</p>
             </div>
         </a>
 
